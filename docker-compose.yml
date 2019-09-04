@@ -1,0 +1,9 @@
+---
+version: "3"
+services:
+  base:
+    container_name: lein
+    image: clojure:lein-alpine
+    volumes:
+      - ./code:/srv/code
+    working_dir: /srv/code/${PROJECT_DIR:-}
